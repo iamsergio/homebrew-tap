@@ -25,7 +25,7 @@ jobs:
       # Cache brew packages
       - uses: tecolicom/actions-use-homebrew-tools@v1
         with:
-          tools: "graphviz qt5 qt6"
+          tools: "graphviz qt@5 qt@6"
 
       - name: Brew install
         run: |

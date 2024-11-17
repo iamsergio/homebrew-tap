@@ -22,6 +22,11 @@ jobs:
       - name: Checkout sources
         uses: actions/checkout@v4
 
+      # Cache brew packages
+      - uses: tecolicom/actions-use-homebrew-tools@v1
+        with:
+          tools: "graphviz qt5 qt6"
+
       - name: Brew install
         run: |
           brew install --build-from-source --formula ./kdstatemachineeditor-qt5.rb
